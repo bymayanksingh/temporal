@@ -10,8 +10,8 @@ function App() {
         <div className="text-2xl font-bold">GridX</div>
         <div className="flex gap-4 md:gap-8">
           <Link to="/" className="text-white">Home</Link>
-          <a href="#" className="text-gray-500">About</a>
-          <a href="#" className="text-gray-500">Works</a>
+          <Link to="/about" className="text-gray-500">About</Link>
+          <Link to="/works" className="text-gray-500">Works</Link>
           <Link to="/contact" className="text-gray-500">Contact</Link>
         </div>
         <Link to="/contact" className="bg-[#222222] px-6 py-2 rounded-full w-full md:w-auto text-center">Let's talk</Link>
@@ -119,8 +119,8 @@ function App() {
         <div className="text-2xl font-bold mb-8">GridX</div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
           <Link to="/" className="text-gray-400">HOME</Link>
-          <a href="#" className="text-gray-400">ABOUT</a>
-          <a href="#" className="text-gray-400">WORKS</a>
+          <Link to="/about" className="text-gray-400">ABOUT</Link>
+          <Link to="/works" className="text-gray-400">WORKS</Link>
           <Link to="/contact" className="text-gray-400">CONTACT</Link>
         </div>
         <div className="text-gray-400">
