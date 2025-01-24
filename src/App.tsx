@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#111111] text-white p-8">
+    <div className="min-h-screen bg-[#111111] text-white p-4 md:p-8">
       {/* Navigation */}
-      <nav className="flex justify-between items-center mb-12">
+      <nav className="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
         <div className="text-2xl font-bold">GridX</div>
-        <div className="flex gap-8">
-          <a href="#" className="text-white">Home</a>
+        <div className="flex gap-4 md:gap-8">
+          <Link to="/" className="text-white">Home</Link>
           <a href="#" className="text-gray-500">About</a>
           <a href="#" className="text-gray-500">Works</a>
-          <a href="#" className="text-gray-500">Contact</a>
+          <Link to="/contact" className="text-gray-500">Contact</Link>
         </div>
-        <Link to="/contact" className="bg-[#222222] px-6 py-2 rounded-full">Let's talk</Link>
+        <Link to="/contact" className="bg-[#222222] px-6 py-2 rounded-full w-full md:w-auto text-center">Let's talk</Link>
       </nav>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Profile Card */}
-        <div className="bg-[#1A1A1A] rounded-3xl p-8 col-span-1">
+        <div className="bg-[#1A1A1A] rounded-3xl p-8">
           <img 
             src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300&h=300" 
             alt="Profile" 
@@ -48,7 +48,7 @@ function App() {
           <img 
             src="https://images.unsplash.com/photo-1607706189992-eae578626c86?auto=format&fit=crop&q=80&w=200&h=150" 
             alt="Project Preview" 
-            className="mt-4 rounded-lg"
+            className="mt-4 rounded-lg w-full"
           />
         </div>
 
@@ -91,8 +91,8 @@ function App() {
         </div>
 
         {/* Stats Card */}
-        <div className="bg-[#1A1A1A] rounded-3xl p-8 col-span-1">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="bg-[#1A1A1A] rounded-3xl p-8 col-span-1 md:col-span-1 lg:col-span-1">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
               <h2 className="text-4xl font-bold">07</h2>
               <p className="text-gray-400 text-sm mt-2">YEARS<br />EXPERIENCE</p>
@@ -109,7 +109,7 @@ function App() {
         </div>
 
         {/* Contact Card */}
-        <div className="bg-[#1A1A1A] rounded-3xl p-8 col-span-2">
+        <div className="bg-[#1A1A1A] rounded-3xl p-8 col-span-1 md:col-span-2 lg:col-span-2">
           <h2 className="text-4xl font-bold">Let's<br />work <span className="text-blue-500">together</span>.</h2>
         </div>
       </div>
@@ -117,11 +117,11 @@ function App() {
       {/* Footer */}
       <footer className="mt-20 text-center">
         <div className="text-2xl font-bold mb-8">GridX</div>
-        <div className="flex justify-center gap-8 mb-8">
-          <a href="#" className="text-gray-400">HOME</a>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+          <Link to="/" className="text-gray-400">HOME</Link>
           <a href="#" className="text-gray-400">ABOUT</a>
           <a href="#" className="text-gray-400">WORKS</a>
-          <a href="#" className="text-gray-400">CONTACT</a>
+          <Link to="/contact" className="text-gray-400">CONTACT</Link>
         </div>
         <div className="text-gray-400">
           © All rights reserved by <a href="#" className="text-blue-500">WordPressRiver</a>
