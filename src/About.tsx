@@ -1,23 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dribbble, Twitter } from 'lucide-react';
+import Navbar from './components/Navbar';
 
 function About() {
   return (
     <div className="min-h-screen bg-[#111111] text-white p-4 md:p-8">
-      {/* Navigation */}
-      <nav className="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
-        <Link to="/" className="text-2xl font-bold tracking-tight">GridX</Link>
-        <div className="flex gap-6 md:gap-12 flex-wrap justify-center">
-          <Link to="/" className="text-gray-500 hover:text-gray-300 transition-colors">Home</Link>
-          <Link to="/about" className="text-white">About</Link>
-          <Link to="/works" className="text-gray-500 hover:text-gray-300 transition-colors">Works</Link>
-          <Link to="/contact" className="text-gray-500 hover:text-gray-300 transition-colors">Contact</Link>
-        </div>
-        <Link to="/contact" className="bg-[#222222] px-8 py-3 rounded-full hover:bg-[#2a2a2a] transition-colors w-full md:w-auto text-center">
-          Let's talk
-        </Link>
-      </nav>
+      <Navbar />
 
       {/* Header */}
       <div className="flex justify-center items-center mb-16 mt-8 relative">

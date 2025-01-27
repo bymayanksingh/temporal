@@ -1,21 +1,12 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Dribbble, Twitter, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function Contact() {
   return (
     <div className="min-h-screen bg-[#111111] text-white p-4 md:p-8">
-      {/* Navigation */}
-      <nav className="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
-        <div className="text-2xl font-bold tracking-tight">GridX</div>
-        <div className="flex gap-6 md:gap-12 flex-wrap justify-center">
-          <Link to="/" className="text-gray-500 hover:text-gray-300 transition-colors">Home</Link>
-          <a href="#" className="text-gray-500 hover:text-gray-300 transition-colors">About</a>
-          <a href="#" className="text-gray-500 hover:text-gray-300 transition-colors">Works</a>
-          <Link to="/contact" className="text-white">Contact</Link>
-        </div>
-        <Link to="/contact" className="bg-[#222222] px-8 py-3 rounded-full hover:bg-[#2a2a2a] transition-colors w-full md:w-auto text-center">Let's talk</Link>
-      </nav>
+      <Navbar />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 mt-8 md:mt-16">
         {/* Contact Info */}
